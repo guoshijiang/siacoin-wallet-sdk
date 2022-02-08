@@ -6,13 +6,20 @@ import {
 } from "../src/transaction";
 
 
-describe('CreateAddress()', () => {
-    test('test create address', async () => {
-        let addr = CreateAddress()
-        console.log("address==", addr)
+describe('test encode public key to public key', () => {
+    test('encode key to public key', async () => {
+        let key = "ewXkuoLxIEQ3Sf9ez/KzaDpfvvn3cNjuCnNLH/Nuc88="
+        let aa = new Uint8Array(Buffer.from(key, 'base64'))
+        console.log(" publicKey=", Buffer.from(aa).toString('hex'))
     });
 });
 
+describe('CreateAddress()', () => {
+    test('test create address', async () => {
+        let addr = CreateAddress()
+        console.log("address=", addr)
+    });
+});
 
 describe('signTransaction()', ()=>{
     test('sign transaction test', async () => {
