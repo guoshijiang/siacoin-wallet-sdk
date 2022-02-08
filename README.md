@@ -29,3 +29,5 @@ npm install
 Then go directly to `unit.test.js` and execute it to see the effect
 然后直接去 unit.test.js 里面执行看效果
 
+
+# 让同行少走弯路
